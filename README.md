@@ -2,7 +2,7 @@
 
 It is an application that will fetch info from external api 
 Format this data and retrieve to user
-It was builded with springboot.
+It was created using with springboot.
 It loads all info into memory than uses Redis to manage cache.
 
 ## How to run
@@ -16,3 +16,6 @@ It loads all info into memory than uses Redis to manage cache.
 - mock spring context in unit test
 - integration tests
 - exception handle
+- paginate result
+- add more unit tests
+- add more logs

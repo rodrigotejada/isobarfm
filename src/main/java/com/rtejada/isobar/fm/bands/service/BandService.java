@@ -53,7 +53,7 @@ public class BandService {
 
 
     public List<BandDto> getBandByName(FilterType filter) {
-        logger.info("accessing");
+        logger.info("not using cache");
         System.out.println("getting band");
         if (filter != null) {
             switch (filter) {
@@ -72,8 +72,7 @@ public class BandService {
     }
 
     public BandDto getBandByName(String name) throws BandNotFoundException {
-        logger.info("accessing");
-        System.out.println("getting band");
+        logger.info("not using cache");
         BandDto band = bands.get(name);
         if (band == null) {
             throw new BandNotFoundException(String.format("No Band found named: %s", name));
