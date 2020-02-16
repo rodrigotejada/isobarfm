@@ -1,0 +1,15 @@
+version: '3.4'
+services:
+  redis:
+    image: 'redis'
+    container_name: redis
+    command:
+      - /bin/bash
+      - '-c'
+      - |
+        redis-server --daemonize yes
+        tail -f /dev/null
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+    ports:
+      - '6380:6379'
